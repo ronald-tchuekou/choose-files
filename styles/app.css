@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.files-chooser__wrapper {
+  height: 100px;
+  width: 500px;
+  border: 2px dashed #a1a1a1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 1;
+  position: relative;
+  overflow: hidden;
+}
+.files-chooser__wrapper.has-files .image-chooser__label {
+  display: none;
+}
+.files-chooser__wrapper .image-chooser__label {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.files-chooser__wrapper .image-chooser__label .title {
+  font: inherit;
+  font-size: 23px;
+  font-weight: 500;
+  color: #999999;
+}
+.files-chooser__wrapper .image-chooser__label .sub-title {
+  font: inherit;
+  font-size: 18px;
+  font-weight: 500;
+  color: #aaa;
+}
+.files-chooser__wrapper.is-hovered {
+  border-color: #6600ff;
+}
+.files-chooser__wrapper.is-hovered input {
+  z-index: 3;
+}
+.files-chooser__wrapper input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.files-chooser__wrapper .drop-file_item {
+  position: relative;
+  height: 70px;
+  width: 70px;
+  margin: 10px 0 10px 10px;
+  transition: 0.3s;
+}
+.files-chooser__wrapper .drop-file_item img {
+  height: 100%;
+  width: 100%;
+}
+.files-chooser__wrapper .drop-file_item .drop-file-remove-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 5px;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  color: #dfdfdf;
+  background: #00000025;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+.files-chooser__wrapper .drop-file_item .drop-file-remove-btn svg {
+  height: 90%;
+  width: 90%;
+}
+.files-chooser__wrapper .drop-file_item .drop-file-remove-btn:hover {
+  color: white;
+}
+.files-chooser__wrapper .drop-file_item .drop-item-label {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #252525;
+  color: #cfcfcf;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+.files-chooser__wrapper .drop-file_item .drop-item-label::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #252525;
+  transform: rotate(45deg);
+}
+
+/*# sourceMappingURL=app.css.map */
